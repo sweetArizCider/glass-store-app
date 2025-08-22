@@ -1,4 +1,4 @@
-import { test, expect, mock } from "bun:test";
+import { expect, mock, test } from "bun:test";
 
 const random = mock(() => Math.random());
 
