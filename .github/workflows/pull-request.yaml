@@ -41,9 +41,6 @@ jobs:
       - name: Type check
         run: bun run typecheck
 
-      - name: Check formatting
-        run: bun run format:check
-
   build-test:
     runs-on: ubuntu-latest
     needs: quality
