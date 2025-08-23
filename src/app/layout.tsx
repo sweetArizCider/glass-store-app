@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   description: "Vidrio templado, Persianas, Papel Tapiz y más...",
   other: {
     "color-scheme": "light",
-    "supported-color-schemes": "light"
-  }
+    "supported-color-schemes": "light",
+  },
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff"
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
