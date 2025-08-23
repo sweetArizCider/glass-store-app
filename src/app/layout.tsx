@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -15,6 +15,14 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Glass Store TRC",
   description: "Vidrio templado, Persianas, Papel Tapiz y más...",
+  other: {
+    "color-scheme": "light",
+    "supported-color-schemes": "light"
+  }
+};
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff"
 };
 
 export default function RootLayout({
@@ -24,10 +32,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <meta name="color-scheme" content="light" />
-        <meta name="supported-color-schemes" content="light" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
