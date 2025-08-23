@@ -35,3 +35,4 @@ jobs:
             fi
           else
             git push origin HEAD:main
+          fi
