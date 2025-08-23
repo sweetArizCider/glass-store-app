@@ -1,0 +1,42 @@
+name: Promote devl to main (prod)
+
+on:
+  push:
+    branches: [ devl ]          # auto promote when devl changes
+  workflow_dispatch:            # allow manual promotion
+    inputs:
+      source:
+        description: Source branch
+        required: false
+        default: devl
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.source || 'devl' }}
+          fetch-depth: 0
+
+      - name: Fetch current main
+        run: git fetch origin main || true
+
+      - name: Fast-forward main to source
+        run: |
+          SRC=${{ github.event_name == 'workflow_dispatch' && github.event.inputs.source || 'devl' }}
+          if git show-ref --verify --quiet refs/remotes/origin/main; then
+            if git merge-base --is-ancestor origin/main HEAD; then
+              git push origin HEAD:main
+            else
+              echo "Refusing: ${SRC} is not a fast-forward of current main. Create a PR or rebase."
+              exit 1
+            fi
+          else
+            echo "main does not exist yet. Creating it from ${SRC}."
+            git push origin HEAD:main
+          fi
