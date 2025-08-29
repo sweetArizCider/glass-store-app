@@ -8,13 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --font-inter: var(--font-inter);
-  --font-montserrat: var(--font-title);
+  --font-montserrat: var(--font-montserrat);
 }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
 }
