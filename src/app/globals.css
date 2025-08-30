@@ -1,20 +1,22 @@
 @import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
 
 :root {
   --background: #ffffff;
-  color-scheme: light;
 }
 
-@theme inline {
+@theme {
+  --color-scheme: light;
   --color-background: var(--background);
   --font-inter: var(--font-inter);
   --font-montserrat: var(--font-montserrat);
+  --color-blue-1000: #132644;
+  --color-blue-450: #4ab3d5;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  display: flex;
-  flex-flow: column wrap;
 }
