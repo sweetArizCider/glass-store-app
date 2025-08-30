@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ThemeInit } from "../../.flowbite-react/init";
 
-
 export default function App() {
   return (
     <>
