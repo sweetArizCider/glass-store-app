@@ -1,5 +1,6 @@
 import { ThemeProvider } from "flowbite-react";
 import { ButtonComponent } from "src/app/components/button/ButtonComponent";
+import { InputComponent } from "src/app/components/input/InputComponent";
 import { customTheme } from "src/theme";
 import { ThemeInit } from "../../.flowbite-react/init";
 
@@ -10,11 +11,20 @@ export default function App() {
       <ButtonComponent
         size={"lg"}
         type={"button"}
-        color={"secondary"}
+        color={"primary"}
         label={"Continuar"}
         pill
         iconPositionRight
       />
+
+      <div className={"w-96 m-3"}>
+        <InputComponent
+          label={"Nombre"}
+          variant={"outlined"}
+          helperText={"Aqui va tu nombre"}
+          error
+        />
+      </div>
     </ThemeProvider>
   );
 }

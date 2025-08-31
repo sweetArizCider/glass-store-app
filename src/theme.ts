@@ -23,4 +23,30 @@ export const customTheme = createTheme({
       ].join(" "),
     },
   },
+  floatingLabel: {
+    input: {
+      default: {
+        outlined: {
+          md: "border-[#00000053] text-blue-1000 text-xl focus:border-[#00000093] duration-400 border-2 font-medium",
+        },
+      },
+      error: {
+        outlined: {
+          md: "text-xl border-2 font-medium duration-400",
+        },
+      },
+    },
+    label: {
+      default: {
+        outlined: {
+          md: "text-blue-1000 duration-400 peer-focus:text-primary-1000 text-xl peer-focus:-translate-y-[1.4rem] -translate-y-[1.4rem] peer-focus:-translate-x-[-.2rem] -translate-x-[-.2rem] font-medium peer-focus:font-medium hover:cursor-text",
+        },
+      },
+      error: {
+        outlined: {
+          md: "text-xl font-medium duration-400 peer-focus:-translate-y-[1.4rem] -translate-y-[1.4rem] peer-focus:-translate-x-[-.2rem] -translate-x-[-.2rem]",
+        },
+      },
+    },
+  },
 });
