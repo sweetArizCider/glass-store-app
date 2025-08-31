@@ -12,6 +12,8 @@ export default function App() {
         type={"button"}
         color={"primary"}
         label={"Continuar"}
+        pill
+        iconPositionRight
       />
     </ThemeProvider>
   );
