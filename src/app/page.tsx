@@ -11,19 +11,20 @@ export default function App() {
       <ButtonComponent
         size={"lg"}
         type={"button"}
-        color={"secondary"}
+        color={"primary"}
         label={"Continuar"}
         pill
         iconPositionRight
       />
 
-      <InputComponent
-        size={"sm"}
-        label={"Name"}
-        variant={"outlined"}
-        helperText={"Aqui va tu nombre"}
-        disabled
-      />
+      <div className={"w-96 m-3"}>
+        <InputComponent
+          label={"Nombre"}
+          variant={"outlined"}
+          helperText={"Aqui va tu nombre"}
+          error
+        />
+      </div>
     </ThemeProvider>
   );
 }
