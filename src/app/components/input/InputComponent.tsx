@@ -10,7 +10,7 @@ interface InputProps {
   disabled?: boolean;
   color?: ErrorColor;
   size?: InputSize;
-  helperText: string;
+  helperText?: string;
 }
 export const InputComponent = (inputProps: InputProps) => {
   const { label, variant, disabled, color, size, helperText } = inputProps;
