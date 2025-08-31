@@ -11,7 +11,7 @@ interface ButtonProps {
   type: ButtonType;
   size: ButtonSize;
   color: ButtonVariant;
-  pill: boolean | undefined;
+  pill?: boolean;
   iconPositionRight?: boolean;
   href?: string;
   disabled?: boolean;
@@ -40,9 +40,9 @@ export const ButtonComponent = (
       href={href}
       disabled={disabled}
     >
-      {Icon && !iconPositionRight && <Icon className={"mr-3"}></Icon>}
+      {Icon && !iconPositionRight && <Icon className={"mr-3"}/>}
       {label}
-      {Icon && iconPositionRight && <Icon className={"ml-3"}></Icon>}
+      {Icon && iconPositionRight && <Icon className={"ml-3"}/>}
     </Button>
   );
 };

@@ -10,7 +10,7 @@ export default function App() {
       <ButtonComponent
         size={"lg"}
         type={"button"}
-        color={"primary"}
+        color={"secondary"}
         label={"Continuar"}
         pill
         iconPositionRight

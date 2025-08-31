@@ -4,8 +4,8 @@ export const customTheme = createTheme({
   button: {
     base: "flex flex-row items-center justify-center hover:cursor-pointer duration-200 font-inter h-13",
     color: {
-      primary: "bg-blue-1000 hover:bg-blue-1000 text-white font-medium ",
-      secondary: "bg-white hover:bg-white text-blue-1000 font-bold",
+      primary: "bg-blue-1000 hover:bg-blue-900 text-white font-medium ",
+      secondary: "bg-white hover:bg-gray-50 text-blue-1000 font-bold",
     },
     pill: "rounded-4xl",
     size: {
