@@ -12,7 +12,7 @@ interface ButtonProps {
   size: ButtonSize;
   color: ButtonVariant;
   pill: boolean | undefined;
-  iconPositionRight?: boolean
+  iconPositionRight?: boolean;
   href?: string;
   disabled?: boolean;
 }
@@ -20,9 +20,26 @@ interface ButtonProps {
 export const ButtonComponent = (
   buttonProps: ButtonProps,
 ): React.ReactElement => {
-  const { type, href, color, label, size, Icon, pill, disabled, iconPositionRight } = buttonProps;
+  const {
+    type,
+    href,
+    color,
+    label,
+    size,
+    Icon,
+    pill,
+    disabled,
+    iconPositionRight,
+  } = buttonProps;
   return (
-    <Button type={type} size={size} color={color} pill={pill} href={href} disabled={disabled}>
+    <Button
+      type={type}
+      size={size}
+      color={color}
+      pill={pill}
+      href={href}
+      disabled={disabled}
+    >
       {Icon && !iconPositionRight && <Icon className={"mr-3"}></Icon>}
       {label}
       {Icon && iconPositionRight && <Icon className={"ml-3"}></Icon>}
