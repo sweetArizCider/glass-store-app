@@ -3,6 +3,7 @@ import { ButtonComponent } from "src/app/components/button/ButtonComponent";
 import { InputComponent } from "src/app/components/input/InputComponent";
 import { customTheme } from "src/theme";
 import { ThemeInit } from "../../.flowbite-react/init";
+import {TypographyComponent} from "src/app/components/typography/TypographyComponent";
 
 export default function App() {
   return (
@@ -22,8 +23,11 @@ export default function App() {
           label={"Nombre"}
           variant={"outlined"}
           helperText={"Aqui va tu nombre"}
-          error
         />
+
+        <TypographyComponent color={"black"} body={"h1"}>
+          Hey
+        </TypographyComponent>
       </div>
     </ThemeProvider>
   );
