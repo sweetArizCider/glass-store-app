@@ -40,9 +40,9 @@ export const ButtonComponent = (
       href={href}
       disabled={disabled}
     >
-      {Icon && !iconPositionRight && <Icon className={"mr-3"}/>}
+      {Icon && !iconPositionRight && <Icon className={"mr-3"} />}
       {label}
-      {Icon && iconPositionRight && <Icon className={"ml-3"}/>}
+      {Icon && iconPositionRight && <Icon className={"ml-3"} />}
     </Button>
   );
 };
