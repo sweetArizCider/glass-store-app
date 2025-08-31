@@ -1,8 +1,8 @@
 import { ThemeProvider } from "flowbite-react";
 import { ButtonComponent } from "src/app/components/button/ButtonComponent";
+import { InputComponent } from "src/app/components/input/InputComponent";
 import { customTheme } from "src/theme";
 import { ThemeInit } from "../../.flowbite-react/init";
-import { InputComponent } from "src/app/components/input/InputComponent"
 
 export default function App() {
   return (
