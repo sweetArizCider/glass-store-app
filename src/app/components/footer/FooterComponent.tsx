@@ -8,12 +8,7 @@ import {
   FooterLinkGroup,
   FooterTitle,
 } from "flowbite-react";
-import {
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsWhatsapp,
-} from "react-icons/bs";
+import { BsFacebook, BsGithub, BsInstagram, BsWhatsapp } from "react-icons/bs";
 import {
   GITHUB_DEVELOPERS_LINKS,
   GLASS_STORE_LINKS,
