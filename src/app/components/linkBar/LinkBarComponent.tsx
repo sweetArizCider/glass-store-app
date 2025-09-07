@@ -160,7 +160,7 @@ export const LinkBarComponent = () => {
                         <SidebarItem onClick={() => setIsLogged(false)}>
                           {" "}
                           {/* TODO - Replace with auth logic */}
-                          Cerrar Sesion
+                          Cerrar Sesión
                         </SidebarItem>
                       </>
                     ) : (
