@@ -1,7 +1,7 @@
 import type React from "react";
 
 type BodyType = "h1" | "h2" | "h3" | "body1" | "body2";
-type ColorType = "blue" | "black" | "white" | "link";
+type ColorType = "blue" | "black" | "white" | "link" | "gray";
 type AlignType = "left" | "right" | "end" | "start" | "center";
 interface TypographyProps {
   children: React.ReactNode;
@@ -27,6 +27,7 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       blue: "text-blue-1000",
       link: "text-blue-450",
       white: "text-white",
+      gray: "text-gray-700",
     };
     return colorClassMap[color];
   };
@@ -84,7 +85,7 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "body2":
         return (
           <p
-            className={`text-xs ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass}`}
+            className={`text-medium ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass}`}
           >
             {children}
           </p>
