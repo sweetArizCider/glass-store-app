@@ -2,6 +2,7 @@ import { ThemeProvider } from "flowbite-react";
 import { ButtonComponent } from "src/app/components/button/ButtonComponent";
 import { InputComponent } from "src/app/components/input/InputComponent";
 import { LinkBarComponent } from "src/app/components/linkBar/LinkBarComponent";
+import { NavbarComponent } from "src/app/components/navbar/NavbarComponent";
 import { TypographyComponent } from "src/app/components/typography/TypographyComponent";
 import { customTheme } from "src/theme";
 import { ThemeInit } from "../../.flowbite-react/init";
@@ -11,6 +12,7 @@ export default function App() {
     <ThemeProvider theme={customTheme}>
       <ThemeInit />
       <LinkBarComponent />
+      <NavbarComponent />
       <ButtonComponent
         size={"lg"}
         type={"button"}
