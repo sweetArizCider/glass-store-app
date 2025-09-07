@@ -169,7 +169,7 @@ export const LinkBarComponent = () => {
                           Registrarse
                         </SidebarItem>
                         <SidebarItem href="/iniciarSesion">
-                          Iniciar Sesion
+                          Iniciar Sesión
                         </SidebarItem>
                       </>
                     )}
