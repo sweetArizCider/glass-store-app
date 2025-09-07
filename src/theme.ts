@@ -103,7 +103,7 @@ export const customTheme = createTheme({
       bgDark: "bg-blue-1000",
     },
     groupLink: {
-      base: "flex flex-wrap text-sm text-gray-500 dark:text-white",
+      base: "flex flex-wrap text-sm text-white dark:text-white",
       link: {
         base: "me-4 last:mr-0 md:mr-6",
         href: "hover:underline",
@@ -115,7 +115,7 @@ export const customTheme = createTheme({
       size: "h-5 w-5",
     },
     title: {
-      base: "mb-6 text-sm font-semibold uppercase text-gray-500 dark:text-white",
+      base: "mb-6 text-sm font-semibold uppercase text-white dark:text-white",
     },
     divider: {
       base: "my-6 w-full border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700",
