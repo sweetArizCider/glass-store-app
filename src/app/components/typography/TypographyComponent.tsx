@@ -85,7 +85,7 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "body2":
         return (
           <p
-            className={`text-medium ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass}`}
+            className={`text-base ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass}`}
           >
             {children}
           </p>
