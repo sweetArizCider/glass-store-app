@@ -16,7 +16,7 @@ import {
 
 export function FooterComponent() {
   return (
-    <Footer>
+    <Footer bgDark>
       <div className="w-full">
         <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
           <div>
@@ -30,13 +30,13 @@ export function FooterComponent() {
           <div>
             <FooterTitle title="nosotros" />
             <FooterLinkGroup col>
-              <FooterLink href="">
+              <span>
                 En Glass Store, nos especializamos en ofrecer soluciones de alta
                 calidad para la decoración y renovación de hogares y negocios.
                 Con años de experiencia en el sector, nuestro objetivo es
                 transformar espacios con productos innovadores y elegantes como
                 vidrio templado, persianas, papel tapiz y herrajes.
-              </FooterLink>
+              </span>
             </FooterLinkGroup>
           </div>
           <div>
