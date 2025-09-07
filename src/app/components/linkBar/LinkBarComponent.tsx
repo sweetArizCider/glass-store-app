@@ -104,7 +104,7 @@ export const LinkBarComponent = () => {
               <DropdownDivider />
               <DropdownItem>Perfil de Usuario</DropdownItem>
               <DropdownDivider />
-              <DropdownItem>Cerrar Sesion</DropdownItem>
+              <DropdownItem>Cerrar Sesión</DropdownItem>
             </Dropdown>
           ) : (
             <Dropdown
