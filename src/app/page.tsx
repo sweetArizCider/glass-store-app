@@ -1,5 +1,6 @@
 import { ThemeProvider } from "flowbite-react";
 import { ButtonComponent } from "src/app/components/button/ButtonComponent";
+import { FooterComponent } from "src/app/components/footer/FooterComponent";
 import { InputComponent } from "src/app/components/input/InputComponent";
 import { LinkBarComponent } from "src/app/components/linkBar/LinkBarComponent";
 import { NavbarComponent } from "src/app/components/navbar/NavbarComponent";
@@ -36,6 +37,7 @@ export default function App() {
           Iniciar sesion
         </TypographyComponent>
       </div>
+      <FooterComponent />
     </ThemeProvider>
   );
 }
