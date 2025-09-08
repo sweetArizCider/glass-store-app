@@ -51,7 +51,7 @@ export const customTheme = createTheme({
   },
   navbar: {
     root: {
-      base: "bg-blue-1000 px-2 py-2.5 sm:px-4 dark:border-gray-700 dark:bg-gray-800",
+      base: "bg-blue-1000 px-2 py-2.5 sm:px-4 dark:bg-blue-1000 dark:bg-blue-1000",
       rounded: {
         on: "rounded",
         off: "",
@@ -98,7 +98,7 @@ export const customTheme = createTheme({
   },
   footer: {
     root: {
-      base: "w-full rounded-lg bg-white shadow md:flex md:items-center md:justify-between dark:bg-blue-1000",
+      base: "w-full rounded-none bg-white shadow md:flex md:items-center md:justify-between dark:bg-blue-1000",
       container: "w-full p-6",
       bgDark: "bg-blue-1000",
     },
