@@ -7,9 +7,14 @@ on:
         description: Deploy Production
         required: false
         default: devl
+      auto_merge:
+        description: Auto-merge PR if checks pass
+        type: boolean
+        default: true
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   promote:
@@ -21,18 +26,35 @@ jobs:
           ref: ${{ github.event.inputs.source }}
           fetch-depth: 0
 
-      - name: Fetch current main
-        run: git fetch origin main || true
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: main
+          head: ${{ github.event.inputs.source }}
+          title: "🚀 Production deployment from ${{ github.event.inputs.source }}"
+          body: |
+            ## Production Deployment
+            
+            This PR promotes changes from `${{ github.event.inputs.source }}` to production (`main`).
+            
+            **Source branch:** `${{ github.event.inputs.source }}`
+            **Target branch:** `main`
+            **Triggered by:** @${{ github.actor }}
+            **Workflow run:** ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            
+            ### Changes included:
+            - All commits from `${{ github.event.inputs.source }}` branch
+            
+            ---
+            *This PR was created automatically by the Deploy Production workflow.*
+          draft: false
+          delete-branch: true
 
-      - name: Fast-forward main to source
+      - name: Enable auto-merge
+        if: github.event.inputs.auto_merge == 'true' && steps.create_pr.outputs.pull-request-number
         run: |
-          if git show-ref --verify --quiet refs/remotes/origin/main; then
-            if git merge-base --is-ancestor origin/main HEAD; then
-              git push origin HEAD:main
-            else
-              echo "Not a fast-forward. Rebase devl or use force input."
-              exit 1
-            fi
-          else
-            git push origin HEAD:main
-          fi
+          gh pr merge ${{ steps.create_pr.outputs.pull-request-number }} --auto --squash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
