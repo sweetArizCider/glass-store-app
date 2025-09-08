@@ -10,6 +10,7 @@ interface TypographyProps {
   color: ColorType;
   body: BodyType;
   align?: AlignType;
+  className?: string;
 }
 export const TypographyComponent = (typographyProps: TypographyProps) => {
   const {
@@ -19,6 +20,7 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
     bold,
     montserrat,
     align = "left",
+    className,
   } = typographyProps;
 
   const getColor = (color: ColorType) => {
@@ -53,7 +55,16 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "h1":
         return (
           <h1
-            className={`text-6xl font-montserrat ${isBold ?? "font-extrabold"} text-pretty ${alignClass}`}
+            className={`
+              text-3xl
+              md:text-6xl 
+              font-montserrat 
+              ${colorClass} 
+              ${isBold ?? "font-extrabold"} 
+              text-pretty 
+              ${alignClass} 
+              ${className}
+            `}
           >
             {children}
           </h1>
@@ -61,7 +72,16 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "h2":
         return (
           <h2
-            className={`text-4xl font-montserrat ${isBold ?? "font-medium"} ${colorClass} text-pretty ${alignClass}`}
+            className={`
+              text-lg
+              md:text-4xl 
+              font-montserrat 
+              ${isBold ?? "font-medium"} 
+              ${colorClass} 
+              text-pretty 
+              ${alignClass} 
+              ${className}
+            `}
           >
             {children}
           </h2>
@@ -69,7 +89,7 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "h3":
         return (
           <h3
-            className={`text-3xl font-montserrat ${isBold ?? "font-medium"} ${colorClass} text-pretty ${alignClass}`}
+            className={`text-2xl font-montserrat ${isBold ?? "font-medium"} ${colorClass} text-pretty ${alignClass} ${className}`}
           >
             {children}
           </h3>
@@ -77,7 +97,7 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "body1":
         return (
           <p
-            className={`text-xl ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass}`}
+            className={`text-xl ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass} ${className}`}
           >
             {children}
           </p>
@@ -85,7 +105,15 @@ export const TypographyComponent = (typographyProps: TypographyProps) => {
       case "body2":
         return (
           <p
-            className={`text-medium ${isMontserrat} ${isBold ?? "font-normal"} ${colorClass} text-pretty ${alignClass}`}
+            className={`
+              text-xs
+              md:text-base 
+              ${isMontserrat} 
+              ${isBold ?? "font-normal"} 
+              ${colorClass} text-pretty 
+              ${alignClass} 
+              ${className}
+            `}
           >
             {children}
           </p>
