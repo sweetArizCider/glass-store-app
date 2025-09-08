@@ -104,7 +104,7 @@ export const LinkBarComponent = () => {
               <DropdownDivider />
               <DropdownItem>Perfil de Usuario</DropdownItem>
               <DropdownDivider />
-              <DropdownItem>Cerrar Sesion</DropdownItem>
+              <DropdownItem>Cerrar Sesión</DropdownItem>
             </Dropdown>
           ) : (
             <Dropdown
@@ -160,7 +160,7 @@ export const LinkBarComponent = () => {
                         <SidebarItem onClick={() => setIsLogged(false)}>
                           {" "}
                           {/* TODO - Replace with auth logic */}
-                          Cerrar Sesion
+                          Cerrar Sesión
                         </SidebarItem>
                       </>
                     ) : (
@@ -169,7 +169,7 @@ export const LinkBarComponent = () => {
                           Registrarse
                         </SidebarItem>
                         <SidebarItem href="/iniciarSesion">
-                          Iniciar Sesion
+                          Iniciar Sesión
                         </SidebarItem>
                       </>
                     )}
