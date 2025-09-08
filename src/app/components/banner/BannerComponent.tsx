@@ -12,10 +12,10 @@ export const BannerComponent = () => {
         pt-12 pl-4 md:pt-28 md:pl-8 lg:pt-38 lg:pl-28`}
       >
         <article className={"flex flex-col gap-2 lg:gap-4"}>
-          <TypographyComponent color={"white"} body={"h2"} className={""}>
+          <TypographyComponent color={"white"} body={"h2"}>
             TRANSFORMA TU ESPACIO CON
           </TypographyComponent>
-          <TypographyComponent color={"white"} body={"h1"} className={""}>
+          <TypographyComponent color={"white"} body={"h1"}>
             ESTILO Y DISTINCIÓN
           </TypographyComponent>
           <TypographyComponent color={"white"} body={"body2"}>
