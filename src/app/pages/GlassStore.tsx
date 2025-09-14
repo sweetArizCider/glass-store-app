@@ -2,6 +2,7 @@ import { BannerComponent } from "src/app/components/banner/BannerComponent";
 import { FooterComponent } from "src/app/components/footer/FooterComponent";
 import { LinkBarComponent } from "src/app/components/linkBar/LinkBarComponent";
 import { NavbarComponent } from "src/app/components/navbar/NavbarComponent";
+import { ProductCarousel } from "src/app/components/productCarousel/ProductCarousel";
 
 export default function GlassStore() {
   return (
@@ -9,6 +10,7 @@ export default function GlassStore() {
       <LinkBarComponent />
       <NavbarComponent />
       <BannerComponent />
+      <ProductCarousel />
       <FooterComponent />
     </>
   );

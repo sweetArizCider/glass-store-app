@@ -14,6 +14,7 @@ export const customTheme = createTheme({
       md: "md:w-72 md:text-2xl md:h-14 w-56 text-xl h-9",
       sm: "w-64 text-base",
       xs: "w-56 text-sm",
+      rounded: "w-14 h-14 rounded-full ",
       responsive: [
         "w-56 text-base",
         "sm:w-64 sm:text-lg",
