@@ -4,9 +4,9 @@ import type React from "react";
 
 export type ButtonVariant = "primary" | "secondary";
 type ButtonType = "button" | "submit" | "reset";
-type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl" | "responsive";
+type ButtonSize = "xs" | "sm" | "md" | "lg" | "xl" | "responsive" | "rounded";
 interface ButtonProps {
-  label: string;
+  label?: string;
   Icon?: React.ComponentType<SvgIconProps>;
   type: ButtonType;
   size: ButtonSize;
@@ -15,6 +15,8 @@ interface ButtonProps {
   iconPositionRight?: boolean;
   href?: string;
   disabled?: boolean;
+  className?: string;
+  children?: React.ReactNode;
 }
 
 export const ButtonComponent = (
@@ -30,6 +32,8 @@ export const ButtonComponent = (
     pill,
     disabled,
     iconPositionRight,
+    className,
+    children,
   } = buttonProps;
   return (
     <Button
@@ -39,9 +43,11 @@ export const ButtonComponent = (
       pill={pill}
       href={href}
       disabled={disabled}
+      className={className}
     >
       {Icon && !iconPositionRight && <Icon className={"mr-3"} />}
       {label}
+      {children}
       {Icon && iconPositionRight && <Icon className={"ml-3"} />}
     </Button>
   );
