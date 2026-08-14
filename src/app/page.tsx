@@ -20,7 +20,9 @@ export default function App() {
 
   const handleNewMessage = () => {
     const randomMessage =
-      HAPPY_BIRD_MESSAGES[Math.floor(Math.random() * HAPPY_BIRD_MESSAGES.length)];
+      HAPPY_BIRD_MESSAGES[
+        Math.floor(Math.random() * HAPPY_BIRD_MESSAGES.length)
+      ];
     setMessage(randomMessage);
   };
 
